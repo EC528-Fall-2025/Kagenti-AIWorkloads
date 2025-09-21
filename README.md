@@ -1,6 +1,14 @@
 # EC528-Fall-2025-template-repo
 
+## Vision and Goals
+
+
 ## Users/Personas
+The project aims to expand the capabilities and adoption of Kagenti by defining and implementing new use cases for the platform. This includes extending the core platform to support these new applications, such as integrating agents into enterprise Slack channels.
+
+To facilitate adoption and demonstrate the platform's potential, we will create examples and demos that clearly showcase Kagenti's capabilities. The project will also enhance the Kagenti UI by improving its usability, adding new features, and refining the overall design to create a more intuitive and powerful user experience.
+
+These goals are intended to ensure that Kagenti is a versatile, user-friendly, and effective tool that meets the needs of a wider range of users and use cases.
 
 ### 1. Platform Engineers / DevOps Teams
 These are engineers responsible for bringing AI agent workloads to production within organizations or for users. They own Kubernetes clusters, networking, security, and scaling, and handle the orchestration of connecting agents to tooling.
