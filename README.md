@@ -15,7 +15,7 @@ To facilitate adoption and demonstrate the platform's potential, we will create 
 These goals are intended to ensure that Kagenti is a versatile, user-friendly, and effective tool that meets the needs of a wider range of users and use cases.
 
 ### 1. Platform Engineers / DevOps Teams
-These are engineers responsible for bringing AI agent workloads to production within organizations or for users. They own Kubernetes clusters, networking, security, and scaling, and handle the orchestration of connecting agents to tooling.
+As a platform engineer responsible for bringing AI agent workloads to production, I want an orchestration tool that simplifies deployment, lifecycle management, and secure integration of agents with my existing infrastructure, so that I can reliably scale, enforce security, and connect AI agents to tooling without manual overhead.
 
 **Requirements**:
 - Simplified deployment and lifecycle management of agents.
@@ -27,7 +27,7 @@ For these users, Kagenti needs to provide a standardized deployment and lifecycl
 </br>
 
 ### 2. Enterprise Application Developers
-Developers building end-user applications (e.g. customer support bots, RAG assistants, workflow automation tools) that rely on agent frameworks.
+As a developer building applications powered by AI agents, I want reliable and standardized APIs that abstract away deployment differences across agent frameworks, so that I can integrate agents into enterprise applications without worrying about infrastructure, scaling, or framework inconsistencies.
 
 **Requirements**:
 - Reliable APIs for embedding agents into enterprise apps such as Slack.
@@ -39,7 +39,7 @@ Kagenti needs to standardize agent deployment across agentic frameworks such as 
 </br>
 
 ### 3. Security Engineers
-Security specialists that need to ensure that AI-driven workflows comply with enterprise or regulatory security standards.
+As a security specialist responsible for ensuring compliance of AI-driven workflows, I want continuous authentication and authorization between agents, tools, and human actors, so that I can eliminate static credentials, enforce least-privilege access, and reduce the attack surface of agentic workflows.
 
 **Requirements**:
 - Eliminate static credentials and enforce least-privilege access.
