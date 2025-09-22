@@ -29,10 +29,13 @@ For these users, Kagenti needs to provide a standardized deployment and lifecycl
 ### 2. Enterprise Application Developers
 As a developer building applications powered by AI agents, I want reliable and standardized APIs that abstract away deployment differences across agent frameworks, so that I can integrate agents into enterprise applications without worrying about infrastructure, scaling, or framework inconsistencies.
 
+As an application developer that plans to create AI powered tooling, I want meaningful examples of how agents can be used with Kagenti in a variety of scenarios so that I can understand what value it provides to me and how easily I can deploy applications with the framework. 
+
 **Requirements**:
 - Reliable APIs for embedding agents into enterprise apps such as Slack.
 - A way to select frameworks fit for a use case without worrying about deployment inconsistencies.
 - High availability, scaling, and fault-tolerance.
+- Meaningful use case examples to demonstrate how effectively the project solves the developer’s problems.
   
 Kagenti needs to standardize agent deployment across agentic frameworks such as LangGraph, CrewAI, or Llama Stack, ensure high-availability services, and provide consistent APIs according to a standard (A2A) in order to reduce integration effort and ease deployment of agent-driven applications.
 
