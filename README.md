@@ -50,3 +50,17 @@ As a security specialist responsible for ensuring compliance of AI-driven workfl
 - Reduce the attack surface of agentic workflows.
   
 Kagenti will need to implement an Agent and Tool authorization system that will continuously authenticate requests between agents and tools to reduce attack surfaces, eliminate credential spoofing to tooling through agents, and give security engineers a better understanding of requests being made with agentic workflows.
+
+## Scope and Features
+
+### In Scope
+- **New Use Case Development**: We will design, build, and document new use cases for the Kagenti platform. This involves:
+  - **Developing or Modifying AI Agents and Tools**: We will create or adapt agents to solve real-world problems. For example, we might develop an agent that integrates with email to automate communication processes.
+  - **Proposing New Features**: If a use case requires a new feature to be added to the core platform, we will propose and document it. We will work with IBM engineers to implement these features and bring them to Kagenti.
+- **Demos and Documentation**: We will create examples and demos that showcase Kagenti's capabilities, particularly for the new use cases we develop. This includes creating clear, step-by-step documentation to facilitate adoption and demonstrate the platform's potential.
+- **UI Enhancements**: We will enhance the Kagenti UI to support new use cases. This includes improving usability, adding features that align with our project goals, and refining the overall design for a more intuitive user experience.
+
+### Out of Scope
+- **Core Platform Feature Developmen**t: This is still up for more discussion, but we will not be building new features directly into the Kagenti core platform, especially in the authorization pattern and MCP gateway. Our work is focused on using the existing platform to build new applications and use cases.
+- **Kagenti Operator Development**: We will not be working on the Kagenti Operator, which manages the agent lifecycle. Our focus is on the agents and the UI, not the underlying Kubernetes orchestration component.
+- **Deep Technical Modifications to Existing Agents**: While we may modify agents to suit our use cases, we will not be undertaking major refactoring or deep technical work on the codebase of pre-existing agents outside the scope of our project.
