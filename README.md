@@ -77,7 +77,7 @@ The Kagenti platform provides the foundation for our work. Its Kubernetes operat
 - **New AI Agents**: We will design, containerize, and deploy AI agents tailored to practical scenarios, contributing both reusable code and templates for the community.
 - **The user layer**: We will work directly on the UI, improving its design, adding new features as necessary, and enhancing usability. Our goal is to create an intuitive interface for developers to deploy and manage their agents.
 
-## Design Implications:
+### Design Implications:
 - **Emphasis on practicality**: We decided to focus on building real-world, tangible use-cases in order to validate Kangeti’s utility and demonstrate clear reasons for why developers should use it and what they can do with it.
 - **Prioritizing user experience**: Our decision to work in-depth on the UI component is based on usability being a gateway for this powerful tool.E nhancing the interface will broaden accessibility, making it easier to deploy, monitor, and manage agents without deep platform expertise.
 - **Building new agents**: Contributing new and diverse AI agents provides immediate value to the Kagenti community. These agents can serve both as functional demos and as templates for future development, encouraging further adoption and contributions.
