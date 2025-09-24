@@ -64,3 +64,20 @@ Kagenti will need to implement an Agent and Tool authorization system that will 
 - **Core Platform Feature Developmen**t: This is still up for more discussion, but we will not be building new features directly into the Kagenti core platform, especially in the authorization pattern and MCP gateway. Our work is focused on using the existing platform to build new applications and use cases.
 - **Kagenti Operator Development**: We will not be working on the Kagenti Operator, which manages the agent lifecycle. Our focus is on the agents and the UI, not the underlying Kubernetes orchestration component.
 - **Deep Technical Modifications to Existing Agents**: While we may modify agents to suit our use cases, we will not be undertaking major refactoring or deep technical work on the codebase of pre-existing agents outside the scope of our project.
+
+## Solution Concept
+![Alt text](images/weather-demo.png?raw=true)
+We will adopt the existing Weather Demo architecture (above) as a reference point for our work. Our new demos will follow a similar pattern, ensuring alignment with Kagenti’s design principles while expanding its set of practical examples.
+
+### Global Architecture Structure:
+The Kagenti platform provides the foundation for our work. Its Kubernetes operator, REST API, and built-in SPIRE integration allow us to securely orchestrate AI agents at scale. Building on this architecture, our contributions will extend the platform across multiple layers:
+- **The Platform Layer**: Kagenti itself, with core features such as agent lifecycle management, workload identity through SPIRE, and a standardized API interface.
+- **The application Layer**: The main focus of our contributions, where we design and implement new functionality.
+- **Use cases & Demos**: We will develop interactive demos and real-world use cases using existing agents, ensuring they are well-documented and showcase end-to-end workflows on Kagenti.
+- **New AI Agents**: We will design, containerize, and deploy AI agents tailored to practical scenarios, contributing both reusable code and templates for the community.
+- **The user layer**: We will work directly on the UI, improving its design, adding new features as necessary, and enhancing usability. Our goal is to create an intuitive interface for developers to deploy and manage their agents.
+
+## Design Implications:
+- **Emphasis on practicality**: We decided to focus on building real-world, tangible use-cases in order to validate Kangeti’s utility and demonstrate clear reasons for why developers should use it and what they can do with it.
+- **Prioritizing user experience**: Our decision to work in-depth on the UI component is based on usability being a gateway for this powerful tool.E nhancing the interface will broaden accessibility, making it easier to deploy, monitor, and manage agents without deep platform expertise.
+- **Building new agents**: Contributing new and diverse AI agents provides immediate value to the Kagenti community. These agents can serve both as functional demos and as templates for future development, encouraging further adoption and contributions.
