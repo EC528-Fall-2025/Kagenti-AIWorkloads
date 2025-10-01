@@ -1,4 +1,22 @@
-# EC528-Fall-2025-template-repo
+# Kagenti
+
+## Collaborators
+| Name | Role | Email |
+|-----------------|-----------------|-----------------|
+| Mariusz Sabath        | Mentor       |    |
+| Maia Iyer             | Mentor       |    |
+| Kelly Abuelsaad       | Mentor       |    |
+| Alan Cha              | Mentor       |    |
+| Peter Zhao            | Developer    | pyzhao@bu.edu     |
+| Sienna Chien          | Developer    | siennac@bu.edu    |
+| Moumit Bhattacharjee  | Developer    | moumitb@bu.edu    |
+| Derek Xu              | Developer    | dxu0117@bu.edu    |
+| Ethan Levine          | Developer    | elevine@bu.edu    |
+| Yena Yu               | Developer    | yenayu@bu.edu     |
+
+## Sprint 1
+[Presentation Recording]()
+[Slides](https://docs.google.com/presentation/d/1Q7zPf_1gD-JVEll4ll9txz9Gi8lQ1h20SgNGf9KBg4g/edit?usp=sharing)
 
 ## Vision and Goals
 The project aims to expand the capabilities and adoption of [Kagenti](https://github.com/kagenti/kagenti/tree/main) by defining and implementing new use cases for the platform. This includes extending the core platform to support these new applications, such as integrating agents into enterprise Slack channels.
