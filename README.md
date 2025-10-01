@@ -15,7 +15,7 @@
 | Yena Yu               | Developer    | yenayu@bu.edu     |
 
 ## Sprint 1
-[Presentation Recording]()
+[Presentation Recording](https://drive.google.com/file/d/1rMi2ut0vbHSCFu7aoKyDDVQ0NcfTJIcc/view?usp=sharing)
 [Slides](https://docs.google.com/presentation/d/1Q7zPf_1gD-JVEll4ll9txz9Gi8lQ1h20SgNGf9KBg4g/edit?usp=sharing)
 
 ## Vision and Goals
