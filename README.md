@@ -31,9 +31,9 @@ To facilitate adoption and demonstrate the platform's potential, we will create 
 These goals are intended to ensure that Kagenti is a versatile, user-friendly, and effective tool that meets the needs of a wider range of users and use cases.
 
 ## Users/Personas
-The project aims to expand the capabilities and adoption of Kagenti by defining and implementing new use cases for the platform. This includes extending the core platform to support these new applications, such as integrating agents into enterprise Slack channels.
+The project aims to expand the capabilities and adoption of Kagenti by defining and implementing new use cases for the platform as well as directly contributing to the project. This includes extending the core platform to support these new applications, such as integrating agents into enterprise Slack channels.
 
-To facilitate adoption and demonstrate the platform's potential, we will create examples and demos that clearly showcase Kagenti's capabilities. The project will also enhance the Kagenti UI by improving its usability, adding new features, and refining the overall design to create a more intuitive and powerful user experience.
+To facilitate adoption and demonstrate the platform's potential, we will create examples and demos that clearly showcase Kagenti's capabilities. The project will also enhance the Kagenti project by tackling fixing bugs, adding features, and other GitHub issues that come up.
 
 These goals are intended to ensure that Kagenti is a versatile, user-friendly, and effective tool that meets the needs of a wider range of users and use cases.
 
@@ -82,15 +82,16 @@ Kagenti will need to implement an Agent and Tool authorization system that will 
   - **Proposing New Features**: If a use case requires a new feature to be added to the core platform, we will propose and document it. We will work with IBM engineers to implement these features and bring them to Kagenti.
 - **Demos and Documentation**: We will create examples and demos that showcase Kagenti's capabilities, particularly for the new use cases we develop. This includes creating clear, step-by-step documentation to facilitate adoption and demonstrate the platform's potential.
 - **UI Enhancements**: We will enhance the Kagenti UI to support new use cases. This includes improving usability, adding features that align with our project goals, and refining the overall design for a more intuitive user experience.
+- **Platform Feature Developmen (all components)**: We will be building contributing directly via GitHub pull-requests into the Kagenti core platform (authorization pattern, MCP gateway, and operator) wherever the priorities of the IBM team lie. This includes but is not limited to fixing bugs, adding features, or developing scripts for installation.
 
 ### Out of Scope
-- **Core Platform Feature Developmen**t: This is still up for more discussion, but we will not be building new features directly into the Kagenti core platform, especially in the authorization pattern and MCP gateway. Our work is focused on using the existing platform to build new applications and use cases.
-- **Kagenti Operator Development**: We will not be working on the Kagenti Operator, which manages the agent lifecycle. Our focus is on the agents and the UI, not the underlying Kubernetes orchestration component.
 - **Deep Technical Modifications to Existing Agents**: While we may modify agents to suit our use cases, we will not be undertaking major refactoring or deep technical work on the codebase of pre-existing agents outside the scope of our project.
+- **Training Agents or Models**: We will not be training or optimizing models for specific use cases.
+- **OpenShift Integration**: We will not be working on OpenShift integration for Kagenti, only vanilla Kubernetes.
 
 ## Solution Concept
 ![Alt text](images/weather-demo.png?raw=true)
-We will adopt the existing Weather Demo architecture (above) as a reference point for our work. Our new demos will follow a similar pattern, ensuring alignment with Kagenti’s design principles while expanding its set of practical examples.
+We will adopt the existing Weather Demo architecture (above) as a reference point for our work. Our new demos will follow a similar pattern, ensuring alignment with Kagenti’s design principles while expanding its set of practical examples. We will also be working off this architecture when working on GitHub issues to extend the project's functionalities.
 
 ### Global Architecture Structure:
 The Kagenti platform provides the foundation for our work. Its Kubernetes operator, REST API, and built-in SPIRE integration allow us to securely orchestrate AI agents at scale. Building on this architecture, our contributions will extend the platform across multiple layers:
@@ -139,15 +140,20 @@ Agent Development:
 ### Release #2 (by week 7)
 - PR for UI changes to display env variables and other various improvements
 - Finalize new use cases for Kagenti based on research
+- PR for platform features in Kagenti, operator, or MCP Gateway
 
 ### Release #3 (by week 9)
 - Create demos for showcasing Kagenti
 - Add additional agents and tools to Kagenti
+- PR for platform features in Kagenti, operator, or MCP Gateway
 
 ### Release #4 (by week 11)
 - Create demos for showcasing kagenti
 - Suggest to Kangti team new features based on our experience
+- PR for platform features in Kagenti, operator, or MCP Gateway
 
 ### Release #5 (by week 13)
 - Publish polished demos and tutorials 
 - Final demo recording and update readme.md
+- PR for platform features in Kagenti, operator, or MCP Gateway
+
