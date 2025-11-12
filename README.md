@@ -26,7 +26,9 @@
 [Presentation Recording](https://drive.google.com/file/d/1w0X_5yFam0ebonQKGJX5d5frd674fehy/view?usp=sharing)
 [Slides](https://docs.google.com/presentation/d/1wjmABrLBNZYKQrAIwjuvawyGPtIRpFxrgofdjDMLDs4/edit?usp=sharing)
 
-
+## Sprint 4
+[Presentation Recording](https://drive.google.com/file/d/164a02O1zW5yKjKj8oFbZjh6WIIad6dCU/view?usp=sharing)
+[Slides](https://docs.google.com/presentation/d/1B4KEPbvV_hVor-Dl8oDULmzbHrXop98_6-BZRtxOpCo/edit?usp=sharing)
 
 ## Vision and Goals
 The project aims to expand the capabilities and adoption of [Kagenti](https://github.com/kagenti/kagenti/tree/main) by defining and implementing new use cases for the platform. This includes extending the core platform to support these new applications, such as integrating agents into enterprise Slack channels.
