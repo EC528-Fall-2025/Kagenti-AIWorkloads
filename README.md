@@ -169,6 +169,7 @@ git clone https://github.com/d0w/kagenti-operator.git # note this is a personal 
 cd kagenti-operator
 git switch keycloak-flags
 
+# in a separate terminal
 git clone https://github.com/kagenti/kagenti.git
 ```
 
