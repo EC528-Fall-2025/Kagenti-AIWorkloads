@@ -61,6 +61,143 @@ This does not encompass all the work done, but it gets the Kagenti platform up a
 
 ## General Contributions
 
+### Kagenti Dependencies Helm Chart
+
+This contribution seeks to add Helm charts to easily install and manage a deployment of Kagenti. This PR specifically focuses on Kagenti's dependencies as these are components that must be installed first before other components such as the Kagenti Operator or MCP Gateway can be installed. After many issues with Helm charts not being able to support custom namespaces, the process is a little manual with the requirement of installing multiple Helm charts as opposed to a single one. However, it still maintains the configurability and management of Helm charts. These Helm charts are most often used in beefier installation scripts or in CI/CD pipelines.
+
+**PR**: [here](https://github.com/kagenti/kagenti/pull/279).
+
+- Please note that the instructions and expected results on this PR are outdated as further work has been done on the charts.
+
+**Instructions**:
+
+```bash
+git clone https://github.com/kagenti/kagenti.git
+```
+
+1. Install [operator-sdk](https://sdk.operatorframework.io/docs/installation/)
+2. Create a kind cluster with `kind create cluster -n agent-platform`
+3. `operator-sdk olm install`
+4. `kubectl create namespace istio-system`
+5. `helm install -n kagenti-system kagenti-deps ./ -f ./values.yaml --create-namespace   --set openshift=false   --set tags.kubernetes=true   --set components.ingressGateway.enabled=true   --set components.gatewayApi.enabled=true`
+
+You should see deployments in `kagenti-system` and `keycloak`. Previously there were also operators that were added to the `operators` namespace, but currently that is not the case and is most likely due to later code changes by other developers.
+
+### Kagenti Operator Helm Chart
+
+With the creation of a new operator called the kagenti-operator (as opposed to platform-operator), a new Helm chart was needed to install and manage this new operator. This PR adds these charts by emulating some of the existing platform-operator charts and modifying them to work with the new operator components and custom resource definitions (CRDs). Similar to the kagenti dependencies, these are mostly used in beefier installation scripts or in CI/CD pipelines.
+
+**PR**: [here](https://github.com/kagenti/kagenti-operator/pull/108)
+
+**Instructions**:
+
+```bash
+git clone https://github.com/kagenti/kagenti-operator.git
+```
+
+1. Create kind cluster with `kind create cluster -n agent-platform`
+
+2. Install cert-manager
+
+```bash
+helm install   cert-manager oci://quay.io/jetstack/charts/cert-manager   --version v1.19.1   --namespace cert-manager-operator   --create-namespace   --set crds.enabled=true
+```
+
+3. Install kube-prometheus-stack
+
+```bash
+helm install kagenti-prometheus kube-prometheus-stack --repo=https://prometheus-community.github.io/helm-charts --create-namespace --namespace=monitoring
+```
+
+4. Install tekton-cd operator
+
+```bash
+kubectl apply -f https://storage.googleapis.com/tekton-releases/operator/latest/release.yaml
+```
+
+5. Install [ko](https://ko.build/install/)
+
+6. Build container and install charts
+
+```bash
+cd kagenti-operator/kagenti-operator
+
+make ko-local-build
+
+make install-local-chart
+```
+
+You should see the controller manager in the `kagenti-system` namespace along with new CRDs (Agent and AgentBuild).
+
+### MCP Gateway Tool Annotations and Observability Stack
+
+This contribution involves adding MCP tool annotations to enhance observability within the MCP Gateway. By incorporating these annotations, we can provide better insights into the interactions between agents and tools, improving monitoring and debugging capabilities. This PR sets up an observability stack that includes tools such as Prometheus and Grafana and allows users to visualize and analyze the performance and behavior of the MCP Gateway.
+
+**[PR](https://github.com/kagenti/mcp-gateway/pull/311)**
+
+- Please note instructions or outcomes may be outdated as further work is done with telemetry in MCP Gateway.
+
+**Instructions**:
+
+```bash
+git clone https://github.com/kagenti/mcp-gateway.git
+
+```
+
+1. `make local-env-setup`
+2. `make inspect-gateway`
+   - Ensure you are on the URL with the proper query parameters given from STDOUT.
+
+3. Follow instructions [here](https://github.com/d0w/mcp-gateway/blob/tool-annotations/docs/guides/observability.md)
+   - Try running some traffic by running some MCP requests to get logs with the annotation hints.
+
+You should be able to get a dashboard in Grafana showing MCP Gateway tool calls.
+
+### Keycloak Feature Flags
+
+This adds configurability to Keycloak when adding new agents or tools to the Kagenti framework. Previously, adding a new client would automatically register itself with Keycloak as well as enable token exchange by default. You would then have to manually delete the Keycloak client or disable token exchange if you did not want those features. Now, with the inclusion of an environments ConfigMap (specific to a namespace), you can set flags to enable/disable creating a keycloak client or token exchange.
+
+**PRs:**
+
+- [kagenti/kagenti #399](https://github.com/kagenti/kagenti/pull/399)
+- [kagenti/kagenti-operator #136](https://github.com/kagenti/kagenti-operator/pull/136)
+
+**Instructions**:
+
+```bash
+git clone https://github.com/d0w/kagenti-operator.git # note this is a personal fork
+cd kagenti-operator
+git switch keycloak-flags
+
+# in a separate terminal
+git clone https://github.com/kagenti/kagenti.git
+```
+
+1. Follow the instructions [here](https://github.com/kagenti/kagenti/blob/main/docs/kind-install.md) and use `uv run kagenti-installer --skip-install operator` to skip the operator installation.
+   - Ensure you have an ollama server listening
+2. Go to the kagenti operator repository:
+
+```bash
+cd platform-operator
+
+make ko-local-build
+
+make install-local-chart
+```
+
+3. Edit a namespace's environments ConfigMap to and adjust the following flags as needed:
+
+```bash
+kubectl edit configmap environments -n team2
+```
+
+```yaml
+KEYCLOAK_CLIENT_REGISTRATION_ENABLED: "true"
+KEYCLOAK_TOKEN_EXCHANGE_ENABLED: "false"
+```
+
+4. Create tools/agents in the Kagenti UI (using the instructions in the Kagenti repository) and go to the Keycloak admin console -> clients -> newly created client. You should see that either the client does not exist or the standard token exchange checkbox is not checked.
+
 # Project Description
 
 ## Vision and Goals
