@@ -40,17 +40,28 @@
 [Presentation Recording](https://drive.google.com/file/d/1-ZNNhZwhhMXHGZP9U694Rxd8V5kWEFrh/view?usp=sharing)
 [Slides](https://docs.google.com/presentation/d/1nRrseSFcb2bR9ZNJ3XFrKV0vlnBXF3tbtLkZq01KKAI/edit?usp=sharing)
 
+## Final Presentation
+
 # Completed Work
 
 A variety of agent and MCP examples that can be integrated into the Kagenti platform as well as contributions to the various Kagenti repositories.
 
+## Simple Setup
+
+This does not encompass all the work done, but it gets the Kagenti platform up and running with a simple agent and tool. Contributions will have links to the relevant documentation or instructions.
+
+1. ...
+
 ## Agents
+
+- Agent 1
+   1. instructions ...
 
 ## MCP Servers
 
 ## General Contributions
 
-# Description
+# Project Description
 
 ## Vision and Goals
 
