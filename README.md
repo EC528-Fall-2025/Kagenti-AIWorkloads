@@ -159,8 +159,8 @@ This adds configurability to Keycloak when adding new agents or tools to the Kag
 
 **PRs:**
 
-- [kagenti/kagenti](https://github.com/kagenti/kagenti/pull/399)
-- [kagenti/kagenti-operator](https://github.com/kagenti/kagenti-operator/pull/136)
+- [kagenti/kagenti #399](https://github.com/kagenti/kagenti/pull/399)
+- [kagenti/kagenti-operator #136](https://github.com/kagenti/kagenti-operator/pull/136)
 
 **Instructions**:
 
