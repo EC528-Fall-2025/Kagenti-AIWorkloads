@@ -65,7 +65,11 @@ This does not encompass all the work done, but it gets the Kagenti platform up a
 
 This contribution seeks to add Helm charts to easily install and manage a deployment of Kagenti. This PR specifically focuses on Kagenti's dependencies as these are components that must be installed first before other components such as the Kagenti Operator or MCP Gateway can be installed. After many issues with Helm charts not being able to support custom namespaces, the process is a little manual with the requirement of installing multiple Helm charts as opposed to a single one. However, it still maintains the configurability and management of Helm charts. These Helm charts are most often used in beefier installation scripts or in CI/CD pipelines.
 
-PR [here](https://github.com/kagenti/kagenti/pull/279). Please note that the instructions and expected results on this PR are outdated as further work has been done on the charts.
+**PR**: [here](https://github.com/kagenti/kagenti/pull/279).
+
+- Please note that the instructions and expected results on this PR are outdated as further work has been done on the charts.
+
+**Instructions**:
 
 ```bash
 git clone https://github.com/kagenti/kagenti.git
@@ -82,6 +86,10 @@ You should see deployments in `kagenti-system` and `keycloak`. Previously there 
 ### Kagenti Operator Helm Chart
 
 With the creation of a new operator called the kagenti-operator (as opposed to platform-operator), a new Helm chart was needed to install and manage this new operator. This PR adds these charts by emulating some of the existing platform-operator charts and modifying them to work with the new operator components and custom resource definitions (CRDs). Similar to the kagenti dependencies, these are mostly used in beefier installation scripts or in CI/CD pipelines.
+
+**PR**: [here](https://github.com/kagenti/kagenti-operator/pull/108)
+
+**Instructions**:
 
 ```bash
 git clone https://github.com/kagenti/kagenti-operator.git
@@ -125,7 +133,11 @@ You should see the controller manager in the `kagenti-system` namespace along wi
 
 This contribution involves adding MCP tool annotations to enhance observability within the MCP Gateway. By incorporating these annotations, we can provide better insights into the interactions between agents and tools, improving monitoring and debugging capabilities. This PR sets up an observability stack that includes tools such as Prometheus and Grafana and allows users to visualize and analyze the performance and behavior of the MCP Gateway.
 
-Relevant [PR](https://github.com/kagenti/mcp-gateway/pull/311). Please note instructions or outcomes may be outdated as further work is done with telemetry in MCP Gateway.
+**[PR](https://github.com/kagenti/mcp-gateway/pull/311)**
+
+- Please note instructions or outcomes may be outdated as further work is done with telemetry in MCP Gateway.
+
+**Instructions**:
 
 ```bash
 git clone https://github.com/kagenti/mcp-gateway.git
@@ -137,8 +149,6 @@ git clone https://github.com/kagenti/mcp-gateway.git
    - Ensure you are on the URL with the proper query parameters given from STDOUT.
 
 3. Follow instructions [here](https://github.com/d0w/mcp-gateway/blob/tool-annotations/docs/guides/observability.md)
-   -
-
    - Try running some traffic by running some MCP requests to get logs with the annotation hints.
 
 You should be able to get a dashboard in Grafana showing MCP Gateway tool calls.
@@ -147,10 +157,12 @@ You should be able to get a dashboard in Grafana showing MCP Gateway tool calls.
 
 This adds configurability to Keycloak when adding new agents or tools to the Kagenti framework. Previously, adding a new client would automatically register itself with Keycloak as well as enable token exchange by default. You would then have to manually delete the Keycloak client or disable token exchange if you did not want those features. Now, with the inclusion of an environments ConfigMap (specific to a namespace), you can set flags to enable/disable creating a keycloak client or token exchange.
 
-Relevant PRs:
+**PRs:**
 
 - [kagenti/kagenti](https://github.com/kagenti/kagenti/pull/399)
 - [kagenti/kagenti-operator](https://github.com/kagenti/kagenti-operator/pull/136)
+
+**Instructions**:
 
 ```bash
 git clone https://github.com/d0w/kagenti-operator.git # note this is a personal fork
