@@ -41,7 +41,7 @@
 [Slides](https://docs.google.com/presentation/d/1nRrseSFcb2bR9ZNJ3XFrKV0vlnBXF3tbtLkZq01KKAI/edit?usp=sharing)
 
 ## Final Presentation
-[Presentation Recording](https://drive.google.com/file/d/1-ZNNhZwhhMXHGZP9U694Rxd8V5kWEFrh/view?usp=sharing)
+[Presentation Recording](https://drive.google.com/file/d/1dNx23MYv5TVGnDwZQ-FL9J-iPUPeR6lt/view?usp=sharing)
 [Slides](https://docs.google.com/presentation/d/1qY4szIqvHTzyvLFvIEJFfLbOhMBcw80oivYu0As3PRg/edit?usp=sharing)
 
 # Completed Work
