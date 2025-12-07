@@ -50,6 +50,7 @@ We contributed to the larger open-source Kagenti project by creating a variety o
 
 The Kagenti project consists of multiple repositories, including [kagenti](https://github.com/kagenti/kagenti) (installer and ui), [agent-examples](https://github.com/kagenti/agent-examples) (sample agents and tools), [mcp-gateway](https://github.com/kagenti/mcp-gateway), and [kagenti-operator](https://github.com/kagenti/kagenti-operator).
 We submitted 36 total PR's across the various Kagenti repositories, spanning multiple categories:
+<br>
 ![pullrequests](./images/PR_Categories.png)
 
 The full list of all of our Pull Requests can be found [here on our Agile Board](https://github.com/orgs/EC528-Fall-2025/projects/23/views/1?filterQuery=pull-request%3Ahttp*&sortedBy%5Bdirection%5D=asc&sortedBy%5BcolumnId%5D=234176367).
