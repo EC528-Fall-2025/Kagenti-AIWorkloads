@@ -73,7 +73,7 @@ Documentation for the specific agents and MCP servers we developed can be found 
   - **Shopping MCP** [(PR)](https://github.com/kagenti/agent-examples/pull/101): product search and recommendations
   - **Cloud Storage MCP** [(PR)](https://github.com/kagenti/agent-examples/pull/92) [(Demo Instructions)](https://github.com/EthanL3/kagenti/blob/document-file-organizer/docs/demo-file-organizer-agent.md): fetchs objects and moves/copies files using GCS, Aws S3, and Azure Blob APIs
 
-- **Image Agent and MCP Server** [(Agent PR)](https://github.com/kagenti/agent-examples/pull/104) [(MCP PR)](https://github.com/kagenti/agent-examples/pull/103) [(A2A Util Support PR)](https://github.com/kagenti/kagenti/pull/438): The image agent is the only multimodal demo agent Kagenti currently has, it returns a randomly generated image of a specified size. To run this, see [this demo]().
+- **Image Agent and MCP Server** [(Agent PR)](https://github.com/kagenti/agent-examples/pull/104) [(MCP PR)](https://github.com/kagenti/agent-examples/pull/103) [(A2A Util Support PR)](https://github.com/kagenti/kagenti/pull/438): The image agent is the only multimodal demo agent Kagenti currently has, it returns a randomly generated image of a specified size. To run this, see [this demo](https://github.com/SiennaChien/kagenti-fork/blob/image_docs/docs/demo-image-agent.md).
   
 - **Restaurant Reservation Agent and MCP Server** [(PR)](https://github.com/kagenti/agent-examples/pull/102): Restaurant search, availability checking and reservation management
 
