@@ -44,20 +44,18 @@
 
 # Completed Work
 
-A variety of agent and MCP examples that can be integrated into the Kagenti platform as well as contributions to the various Kagenti repositories.
+We created variety of agent and MCP examples that can be integrated into the Kagenti platform as well as contributions to the various Kagenti repositories.
 
-## Simple Setup
+## Installation and Setup
 
-This does not encompass all the work done, but it gets the Kagenti platform up and running with a simple agent and tool. Contributions will have links to the relevant documentation or instructions.
+To install and run the Kagenti platform see [this document](https://github.com/kagenti/kagenti/blob/main/docs/kind-install.md), documentation for specific agents and MCP servers can be found below
 
-1. ...
+## Agents and MCP servers
 
-## Agents
-
-- Agent 1
-   1. instructions ...
-
-## MCP Servers
+- Generic Agent (with flight tool and movie tool) - [Demo](https://github.com/kagenti/kagenti/pull/441)
+- Shopping MCP - [PR](https://github.com/kagenti/agent-examples/pulls)
+- Restaurant Reservation MCP and Agent - [PR](https://github.com/kagenti/agent-examples/pull/102)
+- Image Agent and MCP - [Agent PR](https://github.com/kagenti/agent-examples/pull/104) [MCP PR](https://github.com/kagenti/agent-examples/pull/103)
 
 ## General Contributions
 
