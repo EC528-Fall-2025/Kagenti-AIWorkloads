@@ -68,7 +68,7 @@ Documentation for the specific agents and MCP servers we developed can be found 
   - **Movie MCP** [(PR)](https://github.com/kagenti/agent-examples/pull/90): fetch movie and TV show data to provide plot, ratings, and other info.
   - **Flight MCP** [(PR)](https://github.com/kagenti/agent-examples/pull/91): fetch flight details for upcoming travel plans
   - **Shopping MCP** [(PR)](https://github.com/kagenti/agent-examples/pull/101): product search and recommendations
-  - **Cloud Storage MCP** [(PR)](https://github.com/kagenti/agent-examples/pull/92): fetchs objects and moves/copies files using GCS, Aws S3, and Azure Blob APIs
+  - **Cloud Storage MCP** [(PR)](https://github.com/kagenti/agent-examples/pull/92) [(Demo Instructions)](https://github.com/EthanL3/kagenti/blob/document-file-organizer/docs/demo-file-organizer-agent.md): fetchs objects and moves/copies files using GCS, Aws S3, and Azure Blob APIs
 
 - **Image Agent and MCP Server** [(Agent PR)](https://github.com/kagenti/agent-examples/pull/104) [(MCP PR)](https://github.com/kagenti/agent-examples/pull/103) [(A2A Util Support PR)](https://github.com/kagenti/kagenti/pull/438): The image agent is the only multimodal demo agent Kagenti currently has, it returns a randomly generated image of a specified size. To run this, see [this demo]().
   
@@ -179,14 +179,9 @@ You should be able to get a dashboard in Grafana showing MCP Gateway tool calls.
 
 </details>
 
-### Keycloak Feature Flags
+### Keycloak Feature Flags [(PR #1)](https://github.com/kagenti/kagenti/pull/399) [(PR #2)](https://github.com/kagenti/kagenti-operator/pull/136)
 
 This adds configurability to Keycloak when adding new agents or tools to the Kagenti framework. Previously, adding a new client would automatically register itself with Keycloak as well as enable token exchange by default. You would then have to manually delete the Keycloak client or disable token exchange if you did not want those features. Now, with the inclusion of an environments ConfigMap (specific to a namespace), you can set flags to enable/disable creating a keycloak client or token exchange.
-
-**PRs:**
-
-- [kagenti/kagenti #399](https://github.com/kagenti/kagenti/pull/399)
-- [kagenti/kagenti-operator #136](https://github.com/kagenti/kagenti-operator/pull/136)
 
 <details>
 <summary>Instructions</summary>
