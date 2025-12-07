@@ -48,6 +48,8 @@
 
 We created variety of agent and MCP examples that can be integrated into the Kagenti platform as well as contributions to the various Kagenti repositories.
 
+The full list of all of our Pull Requests can be found [here](https://github.com/orgs/EC528-Fall-2025/projects/23/views/1?filterQuery=pull-request%3Ahttp*&sortedBy%5Bdirection%5D=asc&sortedBy%5BcolumnId%5D=234176367).
+
 ## Installation and Setup
 
 To install and run the Kagenti platform see [this document](https://github.com/kagenti/kagenti/blob/main/docs/kind-install.md), documentation for specific agents and MCP servers can be found below
