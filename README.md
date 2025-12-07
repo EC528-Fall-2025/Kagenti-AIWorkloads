@@ -231,7 +231,7 @@ KEYCLOAK_TOKEN_EXCHANGE_ENABLED: "false"
 
 ## Vision and Goals
 
-The project aims to expand the capabilities and adoption of [Kagenti](https://github.com/kagenti/kagenti/tree/main) by defining and implementing new use cases for the platform. This includes extending the core platform to support these new applications, such as integrating agents into enterprise Slack channels.
+The project aims to expand the capabilities and adoption of [Kagenti](https://github.com/kagenti) by defining and implementing new use cases for the platform. This includes extending the core platform to support these new applications, such as integrating agents into enterprise Slack channels.
 
 To facilitate adoption and demonstrate the platform's potential, we will create examples and demos that clearly showcase Kagenti's capabilities. The project will also contribute to the Kagenti project by improving its UI to enhance the user experience, adding new features to the platform, and fixing bugs or adding improvements based on open GitHub issues within the open-source repositories.
 
